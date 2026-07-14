@@ -8,13 +8,11 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
-import Cursor from "@/components/Cursor";
 
 export default function Home() {
   return (
     <>
       <Loader />
-      <Cursor />
 
       <Navbar />
       <Hero />

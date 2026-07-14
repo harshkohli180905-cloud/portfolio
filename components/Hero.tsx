@@ -4,87 +4,173 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="min-h-screen bg-black relative overflow-hidden text-white flex items-center pt-32 px-6"
-    >
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,9,20,0.08),transparent_60%)]" />
+    <section className="relative min-h-screen overflow-hidden bg-black text-white flex items-center justify-center px-6">
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-center gap-20">
-        {/* Left */}
-        <div>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-red-600 uppercase tracking-[6px] mb-6"
-          >
-            Graphic Designer • Brand Identity • Visual Storyteller
-          </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-6xl md:text-8xl lg:text-[9rem] font-black leading-none tracking-tight"
-          >
-            <span className="block text-white">HARSH</span>
-            <span className="block text-red-600">KOHLI</span>
-          </motion.h1>
+      {/* RED GLOW BACKGROUND */}
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.7 }}
-            className="text-zinc-400 mt-8 max-w-xl text-lg leading-8"
-          >
-            I create premium branding, social media creatives and visual
-            experiences that people remember.
-          </motion.p>
+      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(220,0,0,.25),transparent_45%)]" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.7 }}
-            className="flex gap-4 mt-10"
-          >
-            <button className="bg-red-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(229,9,20,0.45)]">
-              View Work
-            </button>
 
-            <button className="border border-white/20 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white hover:text-black hover:scale-105">
-              Contact Me
-            </button>
-          </motion.div>
-        </div>
+      {/* GRAIN TEXTURE */}
 
-        {/* Right */}
-        <div className="relative hidden lg:flex items-center justify-center">
-          <div className="absolute w-72 h-72 rounded-full bg-red-600/20 blur-3xl" />
+      <div
+        className="
+        absolute
+        inset-0
+        opacity-[0.08]
+        bg-[radial-gradient(#ffffff_1px,transparent_1px)]
+        bg-[length:4px_4px]
+        "
+      />
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: [0, -10, 0],
-            }}
-            transition={{
-              opacity: { duration: 0.8, delay: 0.6 },
-              scale: { duration: 0.8, delay: 0.6 },
-              y: {
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
-            }}
-            className="w-[450px] h-[550px] rounded-[40px] border border-red-600/20 bg-gradient-to-b from-zinc-900 to-black shadow-[0_0_80px_rgba(229,9,20,0.25)]"
-          />
-        </div>
+
+
+      {/* GRAFFITI CORNERS */}
+
+      <div className="absolute left-0 top-0 text-red-600/40 text-[120px] font-black rotate-[-20deg]">
+        ✦
       </div>
-    </motion.section>
+
+
+      <div className="absolute right-0 top-0 text-white/20 text-[150px] font-black rotate-12">
+        〰
+      </div>
+
+
+      <div className="absolute left-0 bottom-0 text-white/20 text-[160px] font-black">
+        //
+      </div>
+
+
+      <div className="absolute right-0 bottom-0 text-red-600/30 text-[130px] font-black">
+        ✕
+      </div>
+
+
+
+
+      {/* TOP INFORMATION */}
+
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center text-xs tracking-[5px] text-white/60">
+        INSPIRED BY STREET ART
+        <br />
+        VISUAL DESIGN EXPERIENCE
+      </div>
+
+
+
+
+      {/* SIDE TAGS */}
+
+      <div className="absolute left-8 top-1/2 hidden lg:block rotate-[-90deg] text-xs tracking-[8px] text-white/40">
+        POSTER • BRANDING • ART
+      </div>
+
+
+      <div className="absolute right-8 top-1/2 hidden lg:block rotate-90 text-xs tracking-[8px] text-white/40">
+        CREATIVE STUDIO
+      </div>
+
+
+
+
+
+      {/* MAIN CONTENT */}
+
+      <div className="relative z-10 text-center">
+
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="mb-8 text-sm tracking-[12px] text-red-500"
+        >
+          GRAPHIC DESIGNER
+        </motion.p>
+
+
+
+
+        <motion.h1
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="font-black uppercase leading-[0.75] tracking-[-12px]"
+        >
+
+          <span
+            className="
+            block
+            text-[90px]
+            sm:text-[130px]
+            md:text-[190px]
+            text-white
+            "
+          >
+            HARSH
+          </span>
+
+
+          <span
+            className="
+            block
+            text-[90px]
+            sm:text-[130px]
+            md:text-[190px]
+            text-red-600
+            "
+          >
+            KOHLI
+          </span>
+
+
+        </motion.h1>
+
+
+
+
+
+        <div className="mt-8 inline-block border border-white/30 px-8 py-3 text-sm tracking-[6px]">
+          BRAND • POSTER • VISUAL
+        </div>
+
+
+
+
+        <p className="mt-8 max-w-xl mx-auto text-zinc-400">
+          Turning raw ideas into bold visuals, expressive identities, and designs that leave a lasting mark.
+        </p>
+
+
+      </div>
+
+
+
+
+
+      {/* RANDOM STICKERS */}
+
+      <div className="absolute left-10 bottom-24 rotate-[-8deg] bg-red-600 px-5 py-2 text-black font-black">
+        DESIGN
+      </div>
+
+
+      <div className="absolute right-12 top-36 rotate-[10deg] border border-white px-5 py-2 font-bold">
+        FREELANCER
+      </div>
+
+
+
+
+
+      {/* PAINT DRIPS */}
+
+      <div className="absolute top-0 left-[20%] h-40 w-2 bg-red-600/50" />
+
+      <div className="absolute top-0 right-[25%] h-28 w-2 bg-white/30" />
+
+
+    </section>
   );
 }
