@@ -25,10 +25,10 @@ export default function Loader({ loading }: LoaderProps) {
               animate={{ rotate: 360 }}
               transition={{
                 repeat: Infinity,
-                duration: 1.5,
+                duration: 1,
                 ease: "linear",
               }}
-              className="w-20 h-20 rounded-full border-4 border-zinc-800 border-t-red-600"
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-zinc-800 border-t-red-600"
             />
 
             {/* Name */}

@@ -44,99 +44,41 @@ const experiences = [
   },
 ];
 
-
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="
-      relative
-      bg-black
-      text-white
-      py-32
-      px-6
-      overflow-hidden
-      "
+      className="relative overflow-hidden bg-black px-5 py-20 text-white sm:px-6 sm:py-28 lg:px-10 lg:py-32"
     >
 
-      {/* BACKGROUND */}
-
-      <div
-        className="
-        absolute
-        inset-0
-        bg-[radial-gradient(circle_at_center,rgba(229,9,20,0.08),transparent_60%)]
-        "
-      />
+      {/* Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,9,20,0.08),transparent_60%)]" />
 
 
-      <div
-        className="
-        relative
-        z-10
-        max-w-6xl
-        mx-auto
-        "
-      >
+      <div className="relative z-10 mx-auto max-w-6xl">
 
 
-        {/* HEADING */}
-
+        {/* Heading */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 sm:mb-20"
         >
 
-          <p
-            className="
-            text-red-600
-            uppercase
-            tracking-[6px]
-            text-sm
-            mb-4
-            "
-          >
+          <p className="mb-4 text-xs uppercase tracking-[4px] text-red-600 sm:text-sm sm:tracking-[6px]">
             My Journey
           </p>
 
 
-          <h2
-            className="
-            text-5xl
-            md:text-7xl
-            font-black
-            uppercase
-            "
-          >
+          <h2 className="text-4xl font-black uppercase sm:text-5xl md:text-7xl">
             Creative
-            <span className="text-red-600">
-              {" "}Journey
-            </span>
+            <span className="text-red-600"> Journey</span>
           </h2>
 
 
-          <p
-            className="
-            mt-6
-            text-zinc-400
-            max-w-2xl
-            text-lg
-            leading-8
-            "
-          >
+          <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg sm:leading-8">
             A timeline of my creative experiences, leadership roles,
             and projects where design meets strategy and technology.
           </p>
@@ -145,118 +87,59 @@ export default function Experience() {
 
 
 
-
-
-        {/* TIMELINE */}
-
+        {/* Timeline */}
         <div className="border-t border-white/10">
-
 
           {experiences.map((item, index) => (
 
             <motion.div
               key={index}
-              initial={{
-                opacity: 0,
-                y: 40,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.12,
               }}
-              className="
-              grid
-              md:grid-cols-[220px_1fr]
-              gap-8
-              py-12
-              border-b
-              border-white/10
-              "
+              className="grid grid-cols-1 gap-5 border-b border-white/10 py-10 md:grid-cols-[220px_1fr] md:gap-8 md:py-12"
             >
 
-
-              {/* YEAR */}
-
+              {/* Year */}
               <div>
-
-                <p
-                  className="
-                  text-red-600
-                  font-bold
-                  tracking-widest
-                  text-sm
-                  "
-                >
+                <p className="text-sm font-bold tracking-widest text-red-600">
                   {item.year}
                 </p>
-
               </div>
 
 
-
-
-
-              {/* CONTENT */}
-
+              {/* Content */}
               <div>
 
-
-                <h3
-                  className="
-                  text-2xl
-                  md:text-4xl
-                  font-black
-                  uppercase
-                  "
-                >
+                <h3 className="text-2xl font-black uppercase sm:text-3xl md:text-4xl">
                   {item.role}
                 </h3>
 
 
-                <p
-                  className="
-                  mt-2
-                  text-zinc-400
-                  font-medium
-                  "
-                >
+                <p className="mt-2 text-sm font-medium text-zinc-400 sm:text-base">
                   {item.company}
                 </p>
 
 
-
-                <p
-                  className="
-                  mt-5
-                  text-zinc-500
-                  max-w-3xl
-                  leading-8
-                  "
-                >
+                <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-500 sm:text-base sm:leading-8">
                   {item.description}
                 </p>
 
 
               </div>
 
-
             </motion.div>
 
           ))}
-
 
         </div>
 
 
       </div>
-
 
     </section>
   );

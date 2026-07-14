@@ -39,39 +39,50 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative bg-[#050505] text-white py-32 px-6 overflow-hidden"
+      className="relative overflow-hidden bg-[#050505] px-5 py-20 text-white sm:px-6 sm:py-28 lg:px-10 lg:py-32"
     >
+
       {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(229,9,20,0.08),transparent_60%)]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
 
+      <div className="relative z-10 mx-auto max-w-7xl">
+
+
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-20 text-center"
+          className="mb-12 text-center sm:mb-20"
         >
-          <p className="uppercase tracking-[6px] text-red-600 mb-4">
+
+          <p className="mb-4 text-xs uppercase tracking-[4px] text-red-600 sm:tracking-[6px]">
             What I Do
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black">
+
+          <h2 className="text-4xl font-black sm:text-5xl md:text-7xl">
             Skills &
             <span className="text-red-600"> Expertise</span>
           </h2>
 
-          <p className="text-zinc-400 max-w-2xl mx-auto mt-6 text-lg leading-8">
+
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg sm:leading-8">
             A blend of creative design, branding, technology, and digital
             skills to create impactful visual experiences.
           </p>
+
         </motion.div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
 
           {skills.map((item, index) => (
+
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 40 }}
@@ -85,27 +96,33 @@ export default function Skills() {
                 y: -8,
                 scale: 1.03,
               }}
-              className="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 transition-all duration-300 hover:border-red-600/40 hover:shadow-[0_0_40px_rgba(229,9,20,0.18)]"
+              className="group rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-all duration-300 hover:border-red-600/40 hover:shadow-[0_0_40px_rgba(229,9,20,0.18)] sm:p-8"
             >
 
-              <div className="w-12 h-12 rounded-xl bg-red-600/15 flex items-center justify-center text-red-500 text-xl mb-6">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-red-600/15 text-xl text-red-500">
                 ✦
               </div>
 
-              <h3 className="text-xl font-semibold group-hover:text-red-500 transition-colors">
+
+              <h3 className="text-xl font-semibold transition-colors group-hover:text-red-500">
                 {item.title}
               </h3>
 
-              <p className="text-zinc-400 mt-4 leading-7 text-sm">
+
+              <p className="mt-4 text-sm leading-7 text-zinc-400">
                 {item.skills}
               </p>
 
+
             </motion.div>
+
           ))}
 
         </div>
 
+
       </div>
+
     </section>
   );
 }

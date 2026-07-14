@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black text-white flex items-center justify-center px-6">
+    <section className="relative min-h-screen overflow-hidden bg-black text-white flex items-center justify-center px-5 sm:px-6">
 
 
       {/* RED GLOW BACKGROUND */}
@@ -52,7 +52,7 @@ export default function Hero() {
 
       {/* TOP INFORMATION */}
 
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center text-xs tracking-[5px] text-white/60">
+      <div className="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2 w-full px-4 text-center text-[10px] sm:text-xs tracking-[3px] sm:tracking-[5px] text-white/60">
         INSPIRED BY STREET ART
         <br />
         VISUAL DESIGN EXPERIENCE
@@ -84,7 +84,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mb-8 text-sm tracking-[12px] text-red-500"
+          className="mb-6 sm:mb-8 text-xs sm:text-sm tracking-[6px] sm:tracking-[12px] text-red-500"
         >
           GRAPHIC DESIGNER
         </motion.p>
@@ -96,15 +96,15 @@ export default function Hero() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="font-black uppercase leading-[0.75] tracking-[-12px]"
+          className="font-black uppercase leading-[0.75] tracking-[-6px] sm:tracking-[-12px]"
         >
 
           <span
             className="
             block
-            text-[90px]
-            sm:text-[130px]
-            md:text-[190px]
+            text-[65px]
+sm:text-[130px]
+md:text-[190px]
             text-white
             "
           >
@@ -151,12 +151,12 @@ export default function Hero() {
 
       {/* RANDOM STICKERS */}
 
-      <div className="absolute left-10 bottom-24 rotate-[-8deg] bg-red-600 px-5 py-2 text-black font-black">
+      <div className="absolute left-5 sm:left-10 bottom-16 sm:bottom-24 rotate-[-8deg] bg-red-600 px-5 py-2 text-black font-black">
         DESIGN
       </div>
 
 
-      <div className="absolute right-12 top-36 rotate-[10deg] border border-white px-5 py-2 font-bold">
+      <div className="absolute right-5 sm:right-12 top-32 sm:top-36 rotate-[10deg] border border-white px-5 py-2 font-bold">
         FREELANCER
       </div>
 

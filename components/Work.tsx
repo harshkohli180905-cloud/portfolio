@@ -87,9 +87,10 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative overflow-hidden bg-[#050505] px-6 py-32 text-white lg:px-10"
+      className="relative overflow-hidden bg-[#050505] px-5 py-20 text-white sm:px-6 sm:py-28 lg:px-10 lg:py-32"
     >
 
+      {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute left-1/2 top-0 h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[150px]" />
 
@@ -104,20 +105,21 @@ export default function Work() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20 text-center"
+          className="mb-12 text-center sm:mb-20"
         >
           <p className="mb-5 text-xs uppercase tracking-[0.5em] text-red-600">
             Portfolio
           </p>
 
-          <h2 className="text-5xl font-black tracking-tight md:text-7xl">
+          <h2 className="text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
             Selected
             <span className="text-red-600"> Work</span>
           </h2>
         </motion.div>
 
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
 
           {works.map((work, index) => (
 
@@ -148,8 +150,8 @@ export default function Work() {
                     src={work.image}
                     alt={work.title}
                     fill
-                    sizes="33vw"
-                    className="object-cover transition duration-700 ease-out group-hover:scale-115"
+                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                    className="object-cover transition duration-700 ease-out group-hover:scale-110"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
@@ -162,7 +164,7 @@ export default function Work() {
                 </div>
 
 
-                <div className="p-7">
+                <div className="p-5 sm:p-7">
 
                   <p className="text-xs uppercase tracking-[0.35em] text-red-500">
                     {work.category}
@@ -185,8 +187,7 @@ export default function Work() {
       </div>
 
 
-      {/* FULLSCREEN VIEWER */}
-
+      {/* Fullscreen Viewer */}
       <AnimatePresence>
 
         {selected !== null && (
@@ -195,7 +196,7 @@ export default function Work() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] flex items-center justify-center bg-black/90 backdrop-blur-xl px-6"
+            className="fixed inset-0 z-[999] flex items-center justify-center bg-black/90 px-6 backdrop-blur-xl"
           >
 
             <button
@@ -236,7 +237,6 @@ export default function Work() {
             >
               ›
             </button>
-
 
           </motion.div>
 
