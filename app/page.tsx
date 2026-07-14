@@ -12,7 +12,7 @@ import Loader from "@/components/Loader";
 export default function Home() {
   return (
     <>
-      <Loader />
+      <Loader loading={true} />
 
       <Navbar />
       <Hero />
