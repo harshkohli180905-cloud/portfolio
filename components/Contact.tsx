@@ -13,15 +13,21 @@ import {
 
 import { FaLinkedin } from "react-icons/fa";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
+import { Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+
+  visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.15,
-      duration: 0.7,
-      ease: "easeOut",
+      delay: i * 0.2,
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
     },
   }),
 };
