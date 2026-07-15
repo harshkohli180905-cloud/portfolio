@@ -101,11 +101,11 @@ export default function Contact() {
       setLoading(true);
 
       await emailjs.sendForm(
-        "service_f0t8rfw",
-        "template_3cyn2qh",
-        formRef.current,
-        "w_iNOoGGj5t8RuGQl"
-      );
+  "service_f0t8rfw",
+  "template_5pcz7mc",
+  formRef.current,
+  "w_iNOoGGj5t8RuGQl"
+);
 
 
       setFormData({
