@@ -122,19 +122,20 @@ export default function Contact() {
       });
 
 
-    }catch{
+    } catch (error) {
 
-      setStatus({
-        type:"error",
-        message:"Something went wrong. Please try again.",
-      });
+  console.error("EmailJS Error:", error);
 
+  setStatus({
+    type: "error",
+    message: "Something went wrong. Please try again.",
+  });
 
-    }finally{
+} finally {
 
-      setLoading(false);
+  setLoading(false);
 
-    }
+}
 
   };
 
