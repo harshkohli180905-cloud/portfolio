@@ -36,9 +36,9 @@ const works = [
     image: "/posters/SINFALL.png",
   },
   {
-    title: "SUFIYANA RANG",
-    category: "Art Poster",
-    image: "/posters/SUFIYANA RANG.png",
+    title: "OBSIDIAN",
+    category: "Car Poster",
+    image: "/posters/OBSIDIAN.png",
   },
   {
     title: "TECHNO NIGHT",
@@ -47,7 +47,7 @@ const works = [
   },
   {
     title: "VIRASAT",
-    category: "Cultural Poster",
+    category: "Movie Poster",
     image: "/posters/VIRASAT.png",
   },
 ];
