@@ -192,16 +192,11 @@ LET'S CREATE SOMETHING EPIC
 
 
 
-<h2 className="text-4xl font-black uppercase sm:text-5xl md:text-7xl">
-
-GET IN
-
-<span className="block bg-gradient-to-r from-red-500 via-red-400 to-white bg-clip-text text-transparent">
-
-TOUCH
-
-</span>
-
+<h2 className="text-center text-5xl font-black tracking-tight sm:text-6xl md:text-7xl">
+  GET IN{" "}
+  <span className="text-red-600">
+    TOUCH
+  </span>
 </h2>
 
 
