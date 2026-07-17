@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Work from "@/components/Work";
+import PlatformLinks from "@/components/PlatformLinks";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Testimonials from "@/components/Testimonials";
@@ -32,7 +33,8 @@ export default function Home() {
       <Hero />
       <About />
       <Work />
-      <Skills />
+      <PlatformLinks />
+      <Skills /> 
       <Experience />
       <Testimonials />
       <Contact />
